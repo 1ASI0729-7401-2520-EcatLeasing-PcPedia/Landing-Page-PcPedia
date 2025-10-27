@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "INICIO",
+    "about": "NOSOTROS",
+    "plans": "PLANES",
+    "clients": "CLIENTES",
+    "videos": "VIDEOS",
+    "login": "INICIAR SESION"
+  },
+  "hero": {
+    "subtitle": "ARRENDA TUS EQUIPOS IDEALES"
+  },
+  "buttons": {
+    "contact": "CONTACTO",
+    "start": "EMPEZAR"
+  },
+  "main": {
+    "heading": "ANALIZAMOS TU NEGOCIO. TE OFRECEMOS<br />SOLO LOS EQUIPOS QUE NECESITAS.<br />OPTIMIZAMOS TUS COSTOS EN TI",
+    "paragraph": "Comprendemos que cada empresa tiene necesidades y presupuestos distintos. Por ello, incorporamos dentro de Smart Leasing el servicio que evalúa los recursos, procesos y objetivos de cada cliente para recomendar los equipos más eficientes y rentables, asegurando que inviertan solo en lo que realmente necesitan.",
+    "reviewsNote": "Nuestros clientes nos recomiendan",
+    "galleryText": "Contamos con gente capacitada para<br />la instalación y capacitación de su personal."
+  },
+  "plans": {
+    "title": "CONTAMOS CON DOS PLANES QUE BRINDAN SOLUCIONES A TU NEGOCIO",
+    "basic": {
+      "title": "BASIC - LEASING",
+      "desc": "Plan basico el cual consta de arrendar una cantidad limitada de equipos.",
+      "li1": "Renovación de equipos cada 24 meses.",
+      "li2": "Soporte técnico en horario laboral (lunes a viernes, 9am-6pm).",
+      "li3": "Gestión de garantías incluida.",
+      "li4": "Mantenimiento preventivo 1 vez al año.",
+      "li5": "Incluye consultoría personalizada TI",
+      "li6": "Soporte 24/7.",
+      "li7": "Reposición inmediata de equipos (tiempo estándar 5-7 días).",
+      "li8": "Incluye licencias de software."
+    },
+    "smart": {
+      "title": "SMART - LEASING",
+      "desc": "La solución avanzada para organizaciones en expansión.",
+      "li1": "Renovación de equipos cada 12-18 meses.",
+      "li2": "Soporte técnico 24/7 (remoto y presencial).",
+      "li3": "Consultoría en optimización de costos TI.",
+      "li4": "Reemplazo inmediato en fallas críticas.",
+      "li5": "Mantenimiento preventivo cada 6 meses.",
+      "li6": "Gestión de licencias de software (Office, antivirus, etc.).",
+      "li7": "Reportes de uso y métricas de desempeño.",
+      "li8": ""
+    }
+  },
+  "clients": { "title": "NUESTROS CLIENTES" },
+  "videos": {
+    "title": "VIDEOS",
+    "desc": "En la siguiente seccion estaran los videos de nuestras exposiciones para poder monitorear el avance de nuestro startup."
+  },
+  "footer": {
+    "team": "Team",
+    "services": "Services",
+    "terms": "Terms of use",
+    "press": "Press",
+    "projects": "Projects",
+    "privacy": "Privacy policy",
+    "fees": "Fees",
+    "affiliate": "Affiliate",
+    "contact": "Contact us"
+  }
+}
