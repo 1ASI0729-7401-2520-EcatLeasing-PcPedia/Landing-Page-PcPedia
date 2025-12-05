@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "plans": "PLANS",
+    "clients": "CLIENTS",
+    "videos": "VIDEOS",
+    "login": "LOG IN"
+  },
+  "hero": {
+    "subtitle": "RENT YOUR IDEAL EQUIPMENT"
+  },
+  "buttons": {
+    "contact": "CONTACT",
+    "start": "GET STARTED"
+  },
+  "main": {
+    "heading": "WE ANALYZE YOUR BUSINESS. WE OFFER<br />ONLY THE EQUIPMENT YOU NEED.<br />WE OPTIMIZE YOUR IT COSTS",
+    "paragraph": "We understand that every company has different needs and budgets. That’s why Smart Leasing includes a service that evaluates each client’s resources, processes, and goals to recommend the most efficient and cost-effective equipment, ensuring you invest only in what you truly need.",
+    "reviewsNote": "Our clients recommend us",
+    "galleryText": "We have trained staff for the<br />installation and training of your personnel."
+  },
+  "plans": {
+    "title": "WE HAVE TWO PLANS THAT DELIVER SOLUTIONS FOR YOUR BUSINESS",
+    "basic": {
+      "title": "BASIC - LEASING",
+      "desc": "Basic plan that lets you rent a limited number of devices.",
+      "li1": "Device renewal every 24 months.",
+      "li2": "Business-hours support (Mon–Fri, 9am–6pm).",
+      "li3": "Warranty management included.",
+      "li4": "Preventive maintenance once a year.",
+      "li5": "Includes personalized IT consulting",
+      "li6": "24/7 support.",
+      "li7": "Immediate device replacement (standard 5–7 days).",
+      "li8": "Includes software licenses."
+    },
+    "smart": {
+      "title": "SMART - LEASING",
+      "desc": "The advanced solution for growing organizations.",
+      "li1": "Device renewal every 12–18 months.",
+      "li2": "24/7 technical support (remote and on-site).",
+      "li3": "Consulting to optimize IT costs.",
+      "li4": "Immediate replacement for critical failures.",
+      "li5": "Preventive maintenance every 6 months.",
+      "li6": "Software license management (Office, antivirus, etc.).",
+      "li7": "Usage reports and performance metrics.",
+      "li8": ""
+    }
+  },
+  "clients": { "title": "OUR CLIENTS" },
+  "videos": {
+    "title": "VIDEOS",
+    "desc": "In the following section you will find videos of our presentations to monitor our startup’s progress."
+  },
+  "footer": {
+    "team": "Team",
+    "services": "Services",
+    "terms": "Terms of use",
+    "press": "Press",
+    "projects": "Projects",
+    "privacy": "Privacy policy",
+    "fees": "Fees",
+    "affiliate": "Affiliate",
+    "contact": "Contact us"
+  }
+}

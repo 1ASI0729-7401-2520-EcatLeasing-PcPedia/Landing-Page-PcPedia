@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+/* Visually hidden helper */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
 /* Font styles */
 body {
   font-family: "Antonio", Arial, Helvetica, sans-serif;
@@ -53,6 +62,7 @@ header {
   justify-content: space-between;
   padding: 32px 48px 0px 48px;
   min-height: 82px;
+  position: relative;
 }
 
 .logo {
@@ -64,7 +74,12 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 24px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li a {
@@ -89,6 +104,149 @@ header {
 
 .nav-links li a:hover:not(.login-btn) {
   background: rgba(255, 255, 255, 0.12);
+}
+.lang-toggle {
+  background: #d4dae5;
+  color: #1f3353;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(31, 51, 83, 0.04);
+}
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* Language switch (two-button) */
+.lang-switch {
+  background: #d4dae5;
+  border-radius: 14px;
+  padding: 4px;
+  display: inline-flex;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(31, 51, 83, 0.04);
+  vertical-align: middle;
+}
+.lang-option {
+  background: transparent;
+  color: #1f3353;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: background 0.2s, opacity 0.2s, box-shadow 0.2s;
+  font-family: "Anton", Arial, Helvetica, sans-serif !important;
+  letter-spacing: 1px;
+}
+.lang-option:hover {
+  background: rgba(255,255,255,0.9);
+  opacity: 0.9;
+}
+.lang-option.active {
+  background: #ffffff;
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(31, 51, 83, 0.12);
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 4px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+/* Reliable hamburger using pseudo-elements */
+.nav-toggle { position: relative; color: #fff; z-index: 100; }
+.nav-toggle::before,
+.nav-toggle::after,
+.nav-toggle .line {
+  content: "";
+  position: absolute;
+  left: 11px; right: 11px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+/* Middle line */
+.nav-toggle .line { top: 50%; transform: translateY(-50%); }
+/* Top & Bottom lines */
+.nav-toggle::before { top: 14px; }
+.nav-toggle::after { bottom: 14px; }
+/* X animation */
+.nav-toggle[aria-expanded="true"]::before {
+  top: 50%;
+  transform: translateY(0) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"]::after {
+  bottom: auto; top: 50%;
+  transform: translateY(0) rotate(-45deg);
+}
+.nav-toggle[aria-expanded="true"] .line { opacity: 0; }
+@media (max-width: 950px) {
+  .navbar {
+    padding: 16px 18px 0 18px;
+    min-height: 64px;
+  }
+  .nav-toggle {
+    display: inline-flex;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1f3353;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 18px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+    z-index: 99;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-links.open {
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 18px 24px 18px;
+  }
+  .nav-links li a,
+  .nav-links .login-btn {
+    width: 100%;
+    display: block;
+    white-space: nowrap;   /* evita que se "rompan" raro las palabras */
+  }
+  .nav-links .lang-switch {
+    align-self: flex-start;
+  }
 }
 
 /* Bloque interno main-content alineado y con margen */

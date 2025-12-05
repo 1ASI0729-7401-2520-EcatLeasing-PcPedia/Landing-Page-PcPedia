@@ -15,18 +15,28 @@
     <header>
       <nav class="navbar">
         <div class="logo">PCPEDIA</div>
-        <ul class="nav-links">
-          <li><a href="#hero">INICIO</a></li>
-          <li><a href="#main-content">NOSOTROS</a></li>
-          <li><a href="#plans">PLANES</a></li>
-          <li><a href="#clients">CLIENTES</a></li>
-          <li><a href="#videos">VIDEOS</a></li>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Menú</span>
+          <span class="line" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="primary-nav" role="menu">
+          <li><a href="#hero" data-i18n="nav.home">INICIO</a></li>
+          <li><a href="#main-content" data-i18n="nav.about">NOSOTROS</a></li>
+          <li><a href="#plans" data-i18n="nav.plans">PLANES</a></li>
+          <li><a href="#clients" data-i18n="nav.clients">CLIENTES</a></li>
+          <li><a href="#videos" data-i18n="nav.videos">VIDEOS</a></li>
           <li>
             <a
               href="https://dreamy-sunshine-e3be2b.netlify.app/"
               class="login-btn"
-              >INICIAR SESION</a
-            >
+              data-i18n="nav.login"
+              >INICIAR SESION</a>
+          </li>
+          <li>
+            <div class="lang-switch" role="group" aria-label="Language switch">
+              <button class="lang-option" data-lang="es" aria-pressed="false">ES</button>
+              <button class="lang-option" data-lang="en" aria-pressed="false">EN</button>
+            </div>
           </li>
         </ul>
       </nav>
@@ -36,7 +46,7 @@
       <!-- HERO -->
       <section class="hero" id="hero">
         <h1 class="hero-title">
-          <span>PCPEDIA</span><br />ARRENDA TUS EQUIPOS IDEALES
+          <span>PCPEDIA</span><br /><span data-i18n="hero.subtitle">ARRENDA TUS EQUIPOS IDEALES</span>
         </h1>
         <img src="assets/laptop.png" alt="Laptop" class="hero-img" />
       </section>
@@ -46,15 +56,15 @@
         <div class="main-content-inner">
           <div class="main-row-top">
             <div class="left-content">
-              <button class="contact-btn">CONTACTO</button>
-              <h2>
+              <button class="contact-btn" data-i18n="buttons.contact">CONTACTO</button>
+              <h2 data-i18n="main.heading">
                 ANALIZAMOS TU NEGOCIO. TE OFRECEMOS<br />
                 SOLO LOS EQUIPOS QUE NECESITAS.<br />
                 OPTIMIZAMOS TUS COSTOS EN TI
               </h2>
             </div>
             <div class="right-content">
-              <p>
+              <p data-i18n="main.paragraph">
                 Comprendemos que cada empresa tiene necesidades y presupuestos
                 distintos. Por ello, incorporamos dentro de Smart Leasing el
                 servicio que evalúa los recursos, procesos y objetivos de cada
@@ -71,7 +81,7 @@
                 </span>
               </div>
               <span class="main-score">4.5/5</span>
-              <span class="reviews">Nuestros clientes nos recomiendan</span>
+              <span class="reviews" data-i18n="main.reviewsNote">Nuestros clientes nos recomiendan</span>
             </div>
           </div>
           <div class="main-row-bottom">
@@ -79,7 +89,7 @@
               <img src="assets/team1.png" alt="IT Technician" />
             </div>
             <div class="gallery-item text">
-              <p>
+              <p data-i18n="main.galleryText">
                 Contamos con gente capacitada para<br />
                 la instalación y capacitación de su personal.
               </p>
@@ -93,95 +103,65 @@
 
       <!-- CARDS/PLANS -->
       <section class="cards-section" id="plans">
-        <h2 class="cards-title">
+        <h2 class="cards-title" data-i18n="plans.title">
           CONTAMOS CON DOS PLANES QUE BRINDAN SOLUCIONES A TU NEGOCIO
         </h2>
         <div class="cards-container">
           <div class="cardboxs1">
-            <h2>BASIC - LEASING</h2>
+            <h2 data-i18n="plans.basic.title">BASIC - LEASING</h2>
             <img
               src="assets/Logos/CATBASIC.jpg"
               alt="Basic Leasing Icon"
               class="card-icon"
             />
-            <p>
+            <p data-i18n="plans.basic.desc">
               Plan basico el cual consta de arrendar una cantidad limitada de
               equipos.
             </p>
-            <button class="contact-btn">EMPEZAR</button>
+            <button class="contact-btn" data-i18n="buttons.start">EMPEZAR</button>
             <ul class="card-list">
-              <li>
-                <span class="check">&#10003;</span> Renovación de equipos cada
-                24 meses.
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Soporte técnico en horario
-                laboral (lunes a viernes, 9am-6pm).
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Gestión de garantías
-                incluida.
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Mantenimiento preventivo 1
-                vez al año.
-              </li>
-              <li class="unavailable">
-                <span class="check">&#10003;</span> Incluye consultoría
-                personalizada TI
-              </li>
-              <li class="unavailable">
-                <span class="check">&#10003;</span> Soporte 24/7.
-              </li>
-              <li class="unavailable">
-                <span class="check">&#10003;</span> Reposición inmediata de
-                equipos (tiempo estándar 5-7 días).
-              </li>
-              <li class="unavailable">
-                <span class="check">&#10003;</span> Incluye licencias de
-                software.
-              </li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.basic.li1">Renovación de equipos cada
+                24 meses.</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.basic.li2">Soporte técnico en horario
+                laboral (lunes a viernes, 9am-6pm).</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.basic.li3">Gestión de garantías
+                incluida.</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.basic.li4">Mantenimiento preventivo 1
+                vez al año.</span></li>
+              <li class="unavailable"><span class="check">&#10003;</span> <span data-i18n="plans.basic.li5">Incluye consultoría
+                personalizada TI</span></li>
+              <li class="unavailable"><span class="check">&#10003;</span> <span data-i18n="plans.basic.li6">Soporte 24/7.</span></li>
+              <li class="unavailable"><span class="check">&#10003;</span> <span data-i18n="plans.basic.li7">Reposición inmediata de
+                equipos (tiempo estándar 5-7 días).</span></li>
+              <li class="unavailable"><span class="check">&#10003;</span> <span data-i18n="plans.basic.li8">Incluye licencias de
+                software.</span></li>
             </ul>
           </div>
           <div class="cardboxs2">
-            <h2>SMART - LEASING</h2>
+            <h2 data-i18n="plans.smart.title">SMART - LEASING</h2>
             <img
               src="assets/Logos/CATPREMIUM.jpg"
               alt="Smart Leasing Icon"
               class="card-icon"
             />
-            <p>La solución avanzada para organizaciones en expansión.</p>
-            <button class="contact-btn">EMPEZAR</button>
+            <p data-i18n="plans.smart.desc">La solución avanzada para organizaciones en expansión.</p>
+            <button class="contact-btn" data-i18n="buttons.start">EMPEZAR</button>
             <ul class="card-list">
-              <li>
-                <span class="check">&#10003;</span> Renovación de equipos cada
-                12-18 meses.
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Soporte técnico 24/7 (remoto
-                y presencial).
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Consultoría en optimización
-                de costos TI.
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Reemplazo inmediato en
-                fallas críticas.
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Mantenimiento preventivo
-                cada 6 meses.
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Gestión de licencias de
-                software (Office, antivirus, etc.).
-              </li>
-              <li>
-                <span class="check">&#10003;</span> Reportes de uso y métricas
-                de desempeño.
-              </li>
-              <li class="unavailable"><span class="check">&#10003;</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.smart.li1">Renovación de equipos cada
+                12-18 meses.</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.smart.li2">Soporte técnico 24/7 (remoto
+                y presencial).</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.smart.li3">Consultoría en optimización
+                de costos TI.</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.smart.li4">Reemplazo inmediato en
+                fallas críticas.</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.smart.li5">Mantenimiento preventivo
+                cada 6 meses.</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.smart.li6">Gestión de licencias de
+                software (Office, antivirus, etc.).</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="plans.smart.li7">Reportes de uso y métricas
+                de desempeño.</span></li>
+              <li class="unavailable"><span class="check">&#10003;</span> <span data-i18n="plans.smart.li8"></span></li>
             </ul>
           </div>
         </div>
@@ -189,7 +169,7 @@
 
       <!-- CLIENTES SLIDER INFINITE -->
       <section class="clientes-slider-section" id="clients">
-        <h2 class="clientes-title">NUESTROS CLIENTES</h2>
+        <h2 class="clientes-title" data-i18n="clients.title">NUESTROS CLIENTES</h2>
         <div class="clientes-slider-container">
           <button class="clientes-arrow left" id="clientes-prev">
             &#10094;
@@ -244,8 +224,8 @@
 
       <!-- VIDEOS SLIDER -->
       <section class="videos-section" id="videos">
-        <h2 class="videos-title">VIDEOS</h2>
-        <p class="videos-description">
+        <h2 class="videos-title" data-i18n="videos.title">VIDEOS</h2>
+        <p class="videos-description" data-i18n="videos.desc">
           En la siguiente seccion estaran los videos de nuestras exposiciones
           para poder monitorear el avance de nuestro startup.
         </p>
@@ -294,23 +274,159 @@
         </div>
         <div class="footer-links">
           <div>
-            <a href="#">Team</a>
-            <a href="#">Services</a>
-            <a href="#">Terms of use</a>
+            <a href="#" data-i18n="footer.team">Team</a>
+            <a href="#" data-i18n="footer.services">Services</a>
+            <a href="#" data-i18n="footer.terms">Terms of use</a>
           </div>
           <div>
-            <a href="#">Press</a>
-            <a href="#">Projects</a>
-            <a href="#">Privacy policy</a>
+            <a href="#" data-i18n="footer.press">Press</a>
+            <a href="#" data-i18n="footer.projects">Projects</a>
+            <a href="#" data-i18n="footer.privacy">Privacy policy</a>
           </div>
           <div>
-            <a href="#">Fees</a>
-            <a href="#">Affiliate</a>
-            <a href="#">Contact us</a>
+            <a href="#" data-i18n="footer.fees">Fees</a>
+            <a href="#" data-i18n="footer.affiliate">Affiliate</a>
+            <a href="#" data-i18n="footer.contact">Contact us</a>
           </div>
         </div>
       </div>
     </footer>
+    <script type="application/json" id="i18n-es">
+    {
+      "nav": {
+        "home": "INICIO",
+        "about": "NOSOTROS",
+        "plans": "PLANES",
+        "clients": "CLIENTES",
+        "videos": "VIDEOS",
+        "login": "INICIAR SESION"
+      },
+      "hero": {
+        "subtitle": "ARRENDA TUS EQUIPOS IDEALES"
+      },
+      "buttons": {
+        "contact": "CONTACTO",
+        "start": "EMPEZAR"
+      },
+      "main": {
+        "heading": "ANALIZAMOS TU NEGOCIO. TE OFRECEMOS<br />SOLO LOS EQUIPOS QUE NECESITAS.<br />OPTIMIZAMOS TUS COSTOS EN TI",
+        "paragraph": "Comprendemos que cada empresa tiene necesidades y presupuestos distintos. Por ello, incorporamos dentro de Smart Leasing el servicio que evalúa los recursos, procesos y objetivos de cada cliente para recomendar los equipos más eficientes y rentables, asegurando que inviertan solo en lo que realmente necesitan.",
+        "reviewsNote": "Nuestros clientes nos recomiendan",
+        "galleryText": "Contamos con gente capacitada para<br />la instalación y capacitación de su personal."
+      },
+      "plans": {
+        "title": "CONTAMOS CON DOS PLANES QUE BRINDAN SOLUCIONES A TU NEGOCIO",
+        "basic": {
+          "title": "BASIC - LEASING",
+          "desc": "Plan basico el cual consta de arrendar una cantidad limitada de equipos.",
+          "li1": "Renovación de equipos cada 24 meses.",
+          "li2": "Soporte técnico en horario laboral (lunes a viernes, 9am-6pm).",
+          "li3": "Gestión de garantías incluida.",
+          "li4": "Mantenimiento preventivo 1 vez al año.",
+          "li5": "Incluye consultoría personalizada TI",
+          "li6": "Soporte 24/7.",
+          "li7": "Reposición inmediata de equipos (tiempo estándar 5-7 días).",
+          "li8": "Incluye licencias de software."
+        },
+        "smart": {
+          "title": "SMART - LEASING",
+          "desc": "La solución avanzada para organizaciones en expansión.",
+          "li1": "Renovación de equipos cada 12-18 meses.",
+          "li2": "Soporte técnico 24/7 (remoto y presencial).",
+          "li3": "Consultoría en optimización de costos TI.",
+          "li4": "Reemplazo inmediato en fallas críticas.",
+          "li5": "Mantenimiento preventivo cada 6 meses.",
+          "li6": "Gestión de licencias de software (Office, antivirus, etc.).",
+          "li7": "Reportes de uso y métricas de desempeño.",
+          "li8": ""
+        }
+      },
+      "clients": { "title": "NUESTROS CLIENTES" },
+      "videos": {
+        "title": "VIDEOS",
+        "desc": "En la siguiente seccion estaran los videos de nuestras exposiciones para poder monitorear el avance de nuestro startup."
+      },
+      "footer": {
+        "team": "Team",
+        "services": "Services",
+        "terms": "Terms of use",
+        "press": "Press",
+        "projects": "Projects",
+        "privacy": "Privacy policy",
+        "fees": "Fees",
+        "affiliate": "Affiliate",
+        "contact": "Contact us"
+      }
+    }
+    </script>
+    <script type="application/json" id="i18n-en">
+    {
+      "nav": {
+        "home": "HOME",
+        "about": "ABOUT",
+        "plans": "PLANS",
+        "clients": "CLIENTS",
+        "videos": "VIDEOS",
+        "login": "LOG IN"
+      },
+      "hero": {
+        "subtitle": "RENT YOUR IDEAL EQUIPMENT"
+      },
+      "buttons": {
+        "contact": "CONTACT",
+        "start": "GET STARTED"
+      },
+      "main": {
+        "heading": "WE ANALYZE YOUR BUSINESS. WE OFFER<br />ONLY THE EQUIPMENT YOU NEED.<br />WE OPTIMIZE YOUR IT COSTS",
+        "paragraph": "We understand that every company has different needs and budgets. That’s why Smart Leasing includes a service that evaluates each client’s resources, processes, and goals to recommend the most efficient and cost-effective equipment, ensuring you invest only in what you truly need.",
+        "reviewsNote": "Our clients recommend us",
+        "galleryText": "We have trained staff for the<br />installation and training of your personnel."
+      },
+      "plans": {
+        "title": "WE HAVE TWO PLANS THAT DELIVER SOLUTIONS FOR YOUR BUSINESS",
+        "basic": {
+          "title": "BASIC - LEASING",
+          "desc": "Basic plan that lets you rent a limited number of devices.",
+          "li1": "Device renewal every 24 months.",
+          "li2": "Business-hours support (Mon–Fri, 9am–6pm).",
+          "li3": "Warranty management included.",
+          "li4": "Preventive maintenance once a year.",
+          "li5": "Includes personalized IT consulting",
+          "li6": "24/7 support.",
+          "li7": "Immediate device replacement (standard 5–7 days).",
+          "li8": "Includes software licenses."
+        },
+        "smart": {
+          "title": "SMART - LEASING",
+          "desc": "The advanced solution for growing organizations.",
+          "li1": "Device renewal every 12–18 months.",
+          "li2": "24/7 technical support (remote and on-site).",
+          "li3": "Consulting to optimize IT costs.",
+          "li4": "Immediate replacement for critical failures.",
+          "li5": "Preventive maintenance every 6 months.",
+          "li6": "Software license management (Office, antivirus, etc.).",
+          "li7": "Usage reports and performance metrics.",
+          "li8": ""
+        }
+      },
+      "clients": { "title": "OUR CLIENTS" },
+      "videos": {
+        "title": "VIDEOS",
+        "desc": "In the following section you will find videos of our presentations to monitor our startup’s progress."
+      },
+      "footer": {
+        "team": "Team",
+        "services": "Services",
+        "terms": "Terms of use",
+        "press": "Press",
+        "projects": "Projects",
+        "privacy": "Privacy policy",
+        "fees": "Fees",
+        "affiliate": "Affiliate",
+        "contact": "Contact us"
+      }
+    }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
